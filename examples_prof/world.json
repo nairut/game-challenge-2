@@ -1,0 +1,62 @@
+{
+    "locations": [
+        {
+            "name": "Floresta",
+            "description": "Uma floresta densa com muitas árvores e animais.",
+            "takes_to": ["Igreja", "Centro da cidade"]
+        },
+        {
+            "name": "Igreja",
+            "description": "Uma igreja no meio da floresta com um belo altar, uma cruz muito antiga e uma passagem secreta.",
+            "takes_to": ["Floresta"]
+        },
+        {
+            "name": "Centro da cidade",
+            "description": "O centro da cidade possui alguns negócios locais e uma passagem para a floresta.",
+            "takes_to": ["Floresta", "Loja de armaduras"]
+        },
+        {
+            "name": "Loja de armaduras",
+            "description": "Uma loja de armaduras no centro da cidade com várias armaduras e espadas.",
+            "takes_to": ["Centro da cidade"]
+        }
+    ],
+    "items": [
+        {
+            "name": "Espada",
+            "description": "Uma espada de madeira com um metal forte.",
+            "location": "Floresta",
+            "collectable": true,
+            "offense_bonus": 10
+        },
+        {
+            "name": "Chave",
+            "description": "Uma chave mestra com brasão de uma família famosa na cidade.",
+            "location": "Igreja",
+            "collectable": true,
+            "usable": true
+        },
+        {
+            "name": "Armadura",
+            "description": "Uma armadura de ferro com um símbolo de uma cruz.",
+            "location": "Loja de armaduras",
+            "collectable": true,
+            "price": 100,
+            "defense_bonus": 10
+        }
+    ],
+    "characters": [
+        {
+            "name": "Guerreiro",
+            "description": "Um guerreiro experiente com uma espada de ferro.",
+            "location": "Floresta",
+            "type": "NPC"
+        },
+        {
+            "name": "Vendedor",
+            "description": "Um vendedor de armaduras sarcástico e descontrolado.",
+            "location": "Loja de armaduras",
+            "type": "NPC"
+        }
+    ]
+}
