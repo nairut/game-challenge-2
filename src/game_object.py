@@ -3,6 +3,8 @@ class GameObject:
         self.name = name
         self.description = description
 
-
+    def get_name(self):
+        return self.name
+    
     def describe(self):
         return self.description

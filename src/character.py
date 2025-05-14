@@ -104,25 +104,3 @@ class NPC(Character):
     def speak(self):
         self.dialog = 'Sou um personagem do jogo (NPC)'
         print(self.dialog)
-
-
-
-# * Atributos: `dialogo` (string ou lista de strings).
-# * Métodos: `falar()` (retorna o diálogo específico).
-
-    
-
-
-# **`Personagem` (Herda de `ObjetoJogo`):**
-
-# * Responsabilidades: Representar uma entidade viva no jogo.
-# * Atributos: `nome`, `descricao`.
-# * Métodos: `falar()` (pode retornar um diálogo padrão).
-# * **Subclasses:**
-#   * **`Jogador` (Herda de `Personagem`):**
-#     * Atributos: `inventario` (lista/dict de `Item`).
-#     * Métodos: `pegar_item(item)`, `largar_item(item)`,
-# `mostrar_inventario()`, `ir_para(nome_lugar)`.
-#   * **`NPC` (Non-Player Character - Herda de `Personagem`):**
-#     * Atributos: `dialogo` (string ou lista de strings).
-#     * Métodos: `falar()` (retorna o diálogo específico).
