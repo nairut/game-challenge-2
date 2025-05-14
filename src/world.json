@@ -2,61 +2,130 @@
     "locations": [
         {
             "name": "Floresta",
-            "description": "Uma floresta densa com muitas árvores e animais.",
-            "takes_to": ["Igreja", "Centro da cidade"]
+            "description": "Uma floresta densa e misteriosa. Os raios de sol mal conseguem atravessar as copas das árvores. Você ouve o som de pássaros e pequenos animais.",
+            "takes_to": ["Igreja", "Centro da cidade", "Caverna"]
         },
         {
             "name": "Igreja",
-            "description": "Uma igreja no meio da floresta com um belo altar, uma cruz muito antiga e uma passagem secreta.",
-            "takes_to": ["Floresta"]
+            "description": "Uma antiga igreja abandonada. Vitrais quebrados deixam entrar a luz do sol, criando padrões coloridos no chão empoeirado. Há uma passagem secreta atrás do altar.",
+            "takes_to": ["Floresta", "Passagem Secreta"]
         },
         {
             "name": "Centro da cidade",
-            "description": "O centro da cidade possui alguns negócios locais e uma passagem para a floresta.",
-            "takes_to": ["Floresta", "Loja de armaduras"]
+            "description": "O movimentado centro da cidade. Mercadores oferecem seus produtos, e guardas patrulham as ruas. O cheiro de comida fresca vem da taverna próxima.",
+            "takes_to": ["Floresta", "Loja de armaduras", "Taverna"]
         },
         {
             "name": "Loja de armaduras",
-            "description": "Uma loja de armaduras no centro da cidade com várias armaduras e espadas.",
+            "description": "Uma loja bem equipada com várias armaduras e armas. O ferreiro está ocupado trabalhando em uma nova espada.",
             "takes_to": ["Centro da cidade"]
+        },
+        {
+            "name": "Taverna",
+            "description": "Uma taverna aconchegante com mesas de madeira e um bar bem abastecido. Músicos tocam uma melodia alegre no canto.",
+            "takes_to": ["Centro da cidade"]
+        },
+        {
+            "name": "Caverna",
+            "description": "Uma caverna escura e úmida. Estalactites pendem do teto, e você ouve o som de água pingando em algum lugar.",
+            "takes_to": ["Floresta"]
+        },
+        {
+            "name": "Passagem Secreta",
+            "description": "Um túnel estreito e escuro. O ar está pesado e você sente que há algo importante aqui.",
+            "takes_to": ["Igreja"]
         }
     ],
     "items": [
         {
             "name": "Espada",
-            "description": "Uma espada de madeira com um metal forte.",
+            "description": "Uma espada antiga com runas misteriosas gravadas na lâmina. Parece ter poderes especiais.",
             "location": "Floresta",
             "pickable": true,
-            "offense_bonus": 10
+            "offense_bonus": 15,
+            "type": "weapon"
         },
         {
             "name": "Chave",
-            "description": "Uma chave mestra com brasão de uma família famosa na cidade.",
+            "description": "Uma chave antiga com o brasão de uma família nobre. Parece abrir algo importante.",
             "location": "Igreja",
             "pickable": true,
-            "usable": true
+            "usable": true,
+            "type": "key"
         },
         {
             "name": "Armadura",
-            "description": "Uma armadura de ferro com um símbolo de uma cruz.",
+            "description": "Uma armadura de aço bem conservada. Oferece boa proteção contra ataques.",
             "location": "Loja de armaduras",
             "pickable": true,
             "price": 100,
-            "defense_bonus": 10
+            "defense_bonus": 15,
+            "type": "armor"
+        },
+        {
+            "name": "Poção de Cura",
+            "description": "Uma poção vermelha que brilha suavemente. Pode restaurar sua saúde.",
+            "location": "Taverna",
+            "pickable": true,
+            "usable": true,
+            "type": "potion",
+            "heal_amount": 20
+        },
+        {
+            "name": "Mapa Antigo",
+            "description": "Um mapa amarelado mostrando a região. Parece indicar a localização de um tesouro.",
+            "location": "Caverna",
+            "pickable": true,
+            "type": "quest_item"
+        },
+        {
+            "name": "Pergaminho",
+            "description": "Um pergaminho com símbolos antigos. Pode conter um feitiço poderoso.",
+            "location": "Passagem Secreta",
+            "pickable": true,
+            "type": "quest_item"
         }
     ],
     "characters": [
         {
             "name": "Guerreiro",
-            "description": "Um guerreiro experiente com uma espada de ferro.",
+            "description": "Um guerreiro experiente com cicatrizes de batalha. Parece estar procurando por algo.",
             "location": "Floresta",
-            "type": "NPC"
+            "type": "NPC",
+            "dialog": [
+                "Olá, aventureiro! Estou procurando por uma espada antiga que se perdeu nesta floresta.",
+                "Se você encontrar uma espada com runas, me avise. Posso recompensá-lo bem."
+            ]
         },
         {
             "name": "Vendedor",
-            "description": "Um vendedor de armaduras sarcástico e descontrolado.",
+            "description": "Um ferreiro habilidoso que parece conhecer todos os segredos das armas.",
             "location": "Loja de armaduras",
-            "type": "NPC"
+            "type": "NPC",
+            "dialog": [
+                "Bem-vindo à minha loja! Tenho as melhores armas e armaduras da região.",
+                "Se precisar de algo especial, é só me dizer. Posso fazer encomendas."
+            ]
+        },
+        {
+            "name": "Bardo",
+            "description": "Um bardo talentoso que toca belas canções na taverna.",
+            "location": "Taverna",
+            "type": "NPC",
+            "dialog": [
+                "Olá, amigo! Que tal uma música para alegrar seu dia?",
+                "Conheço muitas histórias sobre tesouros escondidos nesta região..."
+            ]
+        },
+        {
+            "name": "Sacerdote",
+            "description": "Um sacerdote idoso que parece guardar muitos segredos.",
+            "location": "Igreja",
+            "type": "NPC",
+            "dialog": [
+                "Bem-vindo à nossa igreja, filho. Há muitos mistérios para serem desvendados aqui.",
+                "A chave que você procura pode estar mais próxima do que imagina..."
+            ]
         }
     ]
 }
